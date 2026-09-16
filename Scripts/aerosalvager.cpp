@@ -202,16 +202,12 @@ bool AeroSalvagerSolution::InnerDFS(int typeIndex, int posIndex, int selected) /
     return false;
 }
 
-void AeroSalvagerSolution::Solution()
+vector<int> AeroSalvagerSolution::Solution()
 {
     if (OuterDFS(0))
     {
-        for (int i = 0; i < assignment.size(); ++i)
-        {
-            if (assignment[i])
-                cout << '{' << coordinate[i].first << ',' << coordinate[i].second << "}---" << assignment[i] << endl;
-        }
+        return assignment;
     }
     else
-        cout << "无解" << endl;
+        return {};
 }
