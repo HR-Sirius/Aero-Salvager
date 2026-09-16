@@ -32,7 +32,7 @@ public:
     }
     virtual ~AeroSalvagerSolution() = default;
 
-    void Solution(); // 输出答案,即assignment数组
+    vector<int> Solution(); // 输出答案,即assignment数组
 
 private:
     struct Bound
